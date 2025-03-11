@@ -6,6 +6,7 @@
     <title>{{ site.title }} | {{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="professional-layout">
     <div class="sidebar">
@@ -15,14 +16,14 @@
             <p class="title">Data Science Team Lead</p>
         </div>
         <nav class="site-nav">
-            <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
-            <a href="{{ '/about' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a>
-            <a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a>
+            <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}><i class="fas fa-home fa-fw"></i> Home</a>
+            <a href="{{ '/about' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}><i class="fas fa-user fa-fw"></i> About</a>
+            <a href="{{ '/projects' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %}><i class="fas fa-code-branch fa-fw"></i> Projects</a>
+            <a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}><i class="fas fa-pen-fancy fa-fw"></i> Blog</a>
         </nav>
         <div class="social-links">
-            <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/or-koren-ai/" target="_blank">LinkedIn</a>
-            <!-- Add more social links as needed -->
+            <a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/or-koren-ai/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         </div>
     </div>
     <main class="content">
