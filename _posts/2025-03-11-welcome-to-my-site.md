@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Welcome to My Site"
 date: 2025-03-11
 categories: blog

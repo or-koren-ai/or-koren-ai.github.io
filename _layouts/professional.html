@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }} | {{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
 </head>
 <body class="professional-layout">
     <div class="sidebar">
@@ -18,9 +19,17 @@
             <a href="{{ '/about' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a>
             <a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a>
         </nav>
+        <div class="social-links">
+            <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/or-koren-ai/" target="_blank">LinkedIn</a>
+            <!-- Add more social links as needed -->
+        </div>
     </div>
     <main class="content">
         {{ content }}
     </main>
+    <footer class="site-footer">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </footer>
 </body>
 </html> 
