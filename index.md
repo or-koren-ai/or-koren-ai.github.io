@@ -3,11 +3,9 @@ layout: professional
 title: Home
 ---
 
-<div class="section-card">
-  <h1>Data Science & Machine Learning Expert</h1>
-  <p>With 11 years of experience driving business value across diverse industries, I specialize in developing innovative data-driven solutions that deliver tangible results.</p>
-  <a href="/about" class="btn">More About Me</a>
-</div>
+# Or Koren
+
+I'm a Data Science Team Lead with 11 years of experience in Data & ML, driving business value across diverse industries.
 
 ## Areas of Expertise
 
@@ -35,7 +33,7 @@ title: Home
   <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
   {{ post.excerpt }}
-  <a href="{{ post.url | relative_url }}" class="btn">Read More</a>
+  <a href="{{ post.url | relative_url }}">Read More →</a>
 </div>
 {% endfor %}
 

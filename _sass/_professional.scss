@@ -1,10 +1,10 @@
 // Professional theme variables
 $background-color: #FFFFFF;
-$text-color: #333333;
-$accent-color: #0066CC;
-$sidebar-bg: #2C3E50;
-$sidebar-text: #ECF0F1;
-$border-color: #EEEEEE;
+$text-color: #2C3E50;
+$accent-color: #3498DB;
+$sidebar-bg: #F8F9FA;
+$sidebar-text: #2C3E50;
+$border-color: #E9ECEF;
 $heading-color: #2C3E50;
 $footer-bg: #F8F9FA;
 
@@ -22,7 +22,7 @@ body.professional-layout {
 
 // Sidebar styles
 .sidebar {
-    width: 260px;
+    width: 280px;
     background-color: $sidebar-bg;
     position: fixed;
     top: 0;
@@ -30,63 +30,67 @@ body.professional-layout {
     bottom: 0;
     overflow-y: auto;
     color: $sidebar-text;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid $border-color;
+    padding: 2rem 0;
 }
 
 .profile {
     text-align: center;
-    padding: 2rem 1.5rem;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+    padding: 0 1.5rem 2rem;
+    border-bottom: 1px solid $border-color;
 }
 
 .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border: 3px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .name {
     margin: 0.5rem 0;
     font-weight: 600;
     font-size: 1.4rem;
-    color: white;
 }
 
 .title {
     margin: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: lighten($text-color, 20%);
     font-size: 0.95rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 // Navigation styles
 .site-nav {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     padding: 0 1.5rem;
     
     a {
-        padding: 0.8rem 0;
-        color: $sidebar-text;
+        padding: 0.7rem 0;
+        color: $text-color;
         text-decoration: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid $border-color;
         transition: all 0.2s ease;
         font-weight: 500;
-        letter-spacing: 0.5px;
         
         &:hover, &.active {
-            color: white;
-            transform: translateX(5px);
+            color: $accent-color;
         }
         
         &.active {
-            border-left: 3px solid white;
-            padding-left: 10px;
+            font-weight: 600;
+        }
+        
+        i {
+            width: 20px;
+            text-align: center;
+            margin-right: 8px;
+            opacity: 0.8;
         }
     }
 }
@@ -100,16 +104,17 @@ body.professional-layout {
     margin-top: 1rem;
     
     a {
-        color: rgba(255, 255, 255, 0.7);
+        color: $text-color;
         text-decoration: none;
-        transition: color 0.2s ease;
+        transition: all 0.2s ease;
         font-size: 0.9rem;
-        border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
-        padding: 3px 0;
         
         &:hover {
-            color: white;
-            border-bottom-color: white;
+            color: $accent-color;
+        }
+        
+        i {
+            margin-right: 5px;
         }
     }
 }
@@ -117,9 +122,9 @@ body.professional-layout {
 // Main content area
 .content {
     flex: 1;
-    margin-left: 260px;
+    margin-left: 280px;
     padding: 3rem 4rem;
-    max-width: 900px;
+    max-width: 800px;
 }
 
 // Typography
@@ -134,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 2.2rem;
     margin-top: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid $border-color;
     margin-bottom: 1.5rem;
 }
@@ -144,21 +149,10 @@ h2 {
     position: relative;
     padding-bottom: 0.5rem;
     margin-top: 2.5rem;
-    
-    &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 3px;
-        width: 70px;
-        background: $accent-color;
-    }
 }
 
 h3 {
-    font-size: 1.5rem;
-    color: lighten($heading-color, 10%);
+    font-size: 1.4rem;
 }
 
 p {
@@ -172,17 +166,62 @@ a {
     transition: all 0.2s ease;
     
     &:hover {
-        color: darken($accent-color, 15%);
+        text-decoration: underline;
     }
 }
 
-ul, ol {
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
+// Card-like sections
+.section-card {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid $border-color;
+}
+
+// Button styles
+.btn {
+    display: inline-block;
+    background: $accent-color;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s ease;
     
-    li {
-        margin-bottom: 0.5rem;
-        font-size: 1.05rem;
+    &:hover {
+        background: darken($accent-color, 10%);
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Expertise section
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.expertise-item {
+    background: white;
+    border-radius: 5px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid $border-color;
+    
+    h3 {
+        margin-top: 0;
+        font-size: 1.2rem;
+        color: $accent-color;
+    }
+    
+    p {
+        margin-bottom: 0;
+        font-size: 0.95rem;
     }
 }
 
@@ -212,62 +251,6 @@ ul, ol {
     color: #666;
     font-size: 0.9rem;
     border-top: 1px solid $border-color;
-    width: 100%;
-}
-
-// Card-like sections
-.section-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    padding: 1.5rem 2rem;
-    margin-bottom: 2rem;
-    border-top: 4px solid $accent-color;
-}
-
-// Button styles
-.btn {
-    display: inline-block;
-    background: $accent-color;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    
-    &:hover {
-        background: darken($accent-color, 10%);
-        color: white;
-        text-decoration: none;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-}
-
-// Expertise section
-.expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.expertise-item {
-    background: #F8F9FA;
-    border-radius: 6px;
-    padding: 1.2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    border-left: 3px solid $accent-color;
-    
-    h3 {
-        margin-top: 0;
-        font-size: 1.2rem;
-    }
-    
-    p {
-        margin-bottom: 0;
-        font-size: 0.95rem;
-    }
 }
 
 // Tags
@@ -296,11 +279,7 @@ ul, ol {
         position: relative;
         width: 100%;
         height: auto;
-        padding-bottom: 1rem;
-    }
-    
-    .profile {
-        padding: 1.5rem 1rem;
+        padding: 1rem 0;
     }
     
     .content {
@@ -311,8 +290,8 @@ ul, ol {
     }
     
     .profile-image {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
     
     .expertise-grid {
