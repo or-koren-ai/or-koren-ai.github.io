@@ -1,0 +1,7 @@
+- name: John Doe
+  role: Developer
+  bio: Full-stack developer with 5 years of experience
+
+- name: Jane Smith
+  role: Designer
+  bio: UI/UX designer passionate about user experience 

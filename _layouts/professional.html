@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }} | {{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body class="professional-layout">
+    <div class="sidebar">
+        <div class="profile">
+            <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Profile Photo" class="profile-image">
+            <h2 class="name">Or Koren</h2>
+            <p class="title">Data Science Team Lead</p>
+        </div>
+        <nav class="site-nav">
+            <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+            <a href="{{ '/about' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a>
+            <a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a>
+        </nav>
+    </div>
+    <main class="content">
+        {{ content }}
+    </main>
+</body>
+</html> 

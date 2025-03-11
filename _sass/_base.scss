@@ -1,0 +1,22 @@
+// Variables
+$primary-color: #333;
+$secondary-color: #666;
+
+// Base styles
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: $primary-color;
+}
+
+header {
+    background: #f4f4f4;
+    padding: 1rem;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+} 

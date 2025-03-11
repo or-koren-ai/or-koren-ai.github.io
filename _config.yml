@@ -1,0 +1,22 @@
+title: Data Science Professional
+email: your-email@example.com
+description: >- 
+  Data Science and ML professional with 11 years of experience driving business value
+  across diverse industries including Ad-Tech, Retail, Solar Energy, and Semiconductors.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username: or-koren-ai
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - .jekyll-cache/
+  - _site/
+  - Gemfile
+  - Gemfile.lock
